@@ -31,7 +31,7 @@ function fecthdata(url_api, callback){
     }
     // se hace la llamada 
     xhttp.send()
-gigt
+
 }
 
 fecthdata(API, function (error1,data1){
