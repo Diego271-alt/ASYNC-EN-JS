@@ -1,11 +1,10 @@
 //ESTO SE HACE PARA PODER USAR CALLBACKS YA QUE FETCH TIENE UNA ESTRUCTURA DE PROMESAS 
-let XMLHttpRequest= require('xmlhttprequest').XMLHttpRequest;
-const API= 'https://rickandmortyapi.com/api/character/'
-
+const XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
+const API = 'https://rickandmortyapi.com/api/character/'
 
 function fecthdata(url_api, callback){
     //intanciamos una instancia sobre xhtml
-    let xhttp= new XMLHttpRequest;
+    const xhttp= new XMLHttpRequest();
     //traemos la info
     // el get es de traer la info luego el url api es par la api y el true es para que se hgan las cosas de manera asincrona
 
@@ -36,11 +35,11 @@ function fecthdata(url_api, callback){
 }
 
 fecthdata(API, function (error1,data1){
-    if(error1) return console.log(error1);
-        fecthdata(API + data1.results[0].id,function(error2,data2){
-            if(error2) return console.log(error2);
-                fecthdata(API+data2.origin.url, function(error3,data3){
-                    if(error3) return console.log(error3);
+    if(error1) return console.error(error1);
+        fecthdata(API+data1.results[0].id,function(error2,data2){
+            if(error2) return console.error(error2);
+                fecthdata(data2.origin.url, function(error3,data3){
+                    if(error3) return console.error(error3);
                         console.log(data1.info.count);
                         console.log(data2.name);
                         console.log(data3.dimension)

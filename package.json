@@ -4,7 +4,8 @@
   "description": "El asincronimso en JS",
   "main": "index.js",
   "scripts": {
-    "callback": "node src/callback/index.js"
+    "callback": "node src/callback/index.js",
+    "callback:challenge": "node src/callback/challenge.js"
   },
   "author": "Diego Romero Mora",
   "license": "ISC",
