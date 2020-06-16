@@ -7,7 +7,9 @@
     "callback": "node src/callback/index.js",
     "callback:challenge": "node src/callback/challenge.js",
     "promesa": "node src/Promesas/index.js",
-    "promesa:challenge": "node src/Promesas/challengeP.js"
+    "promesa:challenge": "node src/Promesas/challengeP.js",
+    "async": "node src/async/index.js"
+
   },
   "author": "Diego Romero Mora",
   "license": "ISC",
