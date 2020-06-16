@@ -1,7 +1,7 @@
 //ESTO SE HACE PARA PODER USAR CALLBACKS YA QUE FETCH TIENE UNA ESTRUCTURA DE PROMESAS 
-const XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
+let XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
 
-const fecthdata = (url_api)=>{
+const fecthData = (url_api) => {
     return new Promise((resolve,reject) => {
         const xhttp= new XMLHttpRequest();
         //traemos la info
@@ -31,4 +31,4 @@ const fecthdata = (url_api)=>{
 }
 
 
-module.exports= fecthdata();
+module.exports= fecthData;
